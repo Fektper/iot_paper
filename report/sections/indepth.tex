@@ -1,0 +1,18 @@
+In this section I will take a closer look into two different implementations of Trusted Execution Environments. My goal is to have two implementations on the same CPU-ISA and also focus on implementations that are relevant for the context of the IoT. Therefore, the main two ISA's that would come into question are ARM and RISC-V. Since RISC-V is an open source ISA, it seems more fitting to set the focus there. Additionally, the TEE "Keystone", which seems to be really successful and actively maintained is based on RISC-V. 
+
+\subsection{Keystone \cite{keystone_paper}}
+The documentation around Keystone is exhaustive, going much further than just the original paper describing it. Also, there are already several papers from other researchers testing various security aspects of Keystone, which makes it a good fit for a more in depth review. For example, in "When Oblivious is Not: Attacks against OPAM" \cite{Roy2020}, they discuss a new type of page fault sidechannel to attack Keystone and other TEE variants. In "A cross-process Spectre attack via cache on RISC-V processor with trusted execution environment" \cite{spectre_riscv} there is an attempt to exploit the speculative execution of the processor to attack a trusted execution environment. Interestingly, this attack does not work on Keystone.
+
+\subsection{Sanctum \cite{sanctum_paper}}
+For the second paper, I will probably choose Sanctum. It is a little less recent and the GitHub repository seems to not be maintained anymore. However, it is also well documented and there are other research papers testing various aspects of Sanctum. 
+
+\subsection{Other considerations (not covered in the focus section)}
+Other considerations for RISC-V based TEE implementations where:
+\begin{itemize}
+    \item \textbf{TIMBER-V}: It got much less attention than Sanctum and Keystone and the last update on the GitHub was 7 years ago. \cite{timber-v}
+    \item \textbf{MultiZone}: There is only an SDK available on GitHub. There is no in depth corresponding paper explaining the structure. There is a more general paper introducing the architecture \cite{multizone_arm}, however they describe it for Arm-Cortex A7. An even shorter paper (4 pages) exists, where the adaptation to RISC-V is described \cite{multizone_riscv}. This makes it harder to take an in-depth look. Also, both papers didn't gain much attention so i couldn't find interesting third party analysis of the architecture.
+\end{itemize}
+
+These will not be covered in the focus section for the stated reasons above.
+
+

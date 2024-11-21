@@ -1,0 +1,62 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=1.5cm,includefoot]{geometry}
+\usepackage{parskip}
+\usepackage[obeyspaces]{url}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage[sfdefault,lf]{carlito}
+\usepackage[style=ieee]{biblatex}
+\addbibresource{./../report/bibliography.bib}
+
+% \linespread{1.5}
+
+\title{Internet of Things \& Security - Preliminary Reference List}
+\author{Andor Kristen}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section{Trusted Execution Environments}
+\begin{itemize}
+    \item Sanctum: Minimal Hardware Extensions for Strong Software Isolation \cite{sanctum_paper}
+    \begin{itemize}
+        \item Secure Boot and Remote Attestation in the Sanctum
+        Processor \cite{Lebedev2018}
+    \end{itemize}
+    \item Keystone: An Open Framework for Architecting Trusted Execution Environments \cite{keystone_paper}
+    \item Multizone (ARM and RISC-V) \cite{multizone_arm, multizone_riscv}
+    \item TIMBER-V \cite{timber-v}
+    \item Intel SGX Explained \cite{intelsgx}
+    \item Demystifying Arm TrustZone: A Comprehensive Survey \cite{trustzone_demist}
+    \item IIoTEED: An Enhanced, Trusted Execution Environment for Industrial IoT Edge Devices %\cite{IIoTEED}
+    \item Sancus: Low-cost Trustworthy Extensible Networked Devices with a Zero-software Trusted Computing Base \cite{sancus}
+    \item Fortress: Securing IoT Peripherals with Trusted Execution Environments \cite{fortress}
+    \item A Security Architecture for RISC-V based IoT Devices \cite{tee_fraunhofer}
+    \item MyTEE: Own the Trusted Execution Environment on Embedded Devices \cite{MyTEE}
+    \item Komodo: Using verification to disentangle secure-enclave hardware from software \cite{Komodo}
+\end{itemize}
+
+\section{Attacks/Analysis}
+\begin{itemize}
+    \item When Oblivious is Not: Attacks against OPAM \cite{Roy2020}
+    \item A cross-process Spectre attack via cache on RISC-V processor with trusted execution environment \cite{spectre_riscv}
+    \item SgxPectre: Stealing Intel Secrets from SGX Enclaves Via Speculative Execution \cite{sgxspectre}
+    \item Plundervolt: Software-based Fault Injection Attacks against Intel SGX \cite{plundervolt}
+\end{itemize}
+
+
+\section{Surveys/Overviews}
+\begin{itemize}
+    \item Secure and Trusted Execution: Past, Present and Future – A Critical Review in the Context of the Internet of Things and Cyber-Physical Systems \cite{Shepherd2016}
+    \item Trusted Execution Environment: What It Is, and What It Is Not \cite{tee_whatitis}
+    \item A survey on the (in)security of trusted execution environments \cite{survey_insecuritys}
+    \item Survey on Trusted Execution Environments \cite{Buchner2022}
+    \item Hardware based trusted computing architectures for isolation and attestation \cite{Maene2018}
+    \item Systematic Literature Review on the Use of Trusted Execution Environments to Protect Cloud/Fog-Based Internet of Things Applications \cite{Valadares2021}
+\end{itemize}
+
+
+
+\printbibliography
+
+\end{document}
